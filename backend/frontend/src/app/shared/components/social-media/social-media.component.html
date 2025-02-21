@@ -1,0 +1,7 @@
+<div id="social-media" class="flex-center gap-70">
+  @for (button of socialMediaButtons; track $index) {
+  <button [title]="button.name" [link]="button.url" class="btn-social">
+    <app-icon [name]="button.name" class="icon"></app-icon>
+  </button>
+  }
+</div>

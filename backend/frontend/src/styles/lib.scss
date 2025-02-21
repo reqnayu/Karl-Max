@@ -1,0 +1,94 @@
+@use 'sass:string';
+
+$directions: "top", "right", "bottom", "left";
+$spacings: "margin", "padding";
+
+.page {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+
+    &.column { flex-direction: column; }
+    
+    &.row-r { flex-direction: row-reverse; }
+
+    &.column-r { flex-direction: column-reverse; }
+
+    &.align-center { align-items: center; }
+
+    &.justify-center { justify-content: center; }
+    &.between { justify-content: space-between }
+}
+
+.flex-center {
+    @extend .flex, .align-center, .justify-center;
+}
+
+.grid {
+    display: grid;
+
+    &.center { place-items: center }
+
+    @for $i from 1 through 50 {
+        &.fill-col-#{$i * 10} {
+            grid-template-columns: repeat(auto-fill, #{$i * 10px});
+        }
+    }
+}
+
+@function firstChar($string) {
+    @return string.slice($string, 1, 1);
+}
+
+@for $i from 0 through 40 {
+    .gap-#{$i * 5} {
+        gap: $i * 5px;
+    }
+
+    // .pl-10, .mr-20
+    @each $s in $spacings {
+        .#{firstChar($s)}-#{$i} {
+            #{$s}: $i * 5px;
+        }
+
+        @each $dir in $directions {
+            .#{firstChar($s)}#{firstChar($dir)}-#{$i} {
+                #{$s}-#{$dir}: $i * 5px;
+            }
+        }
+    }
+    
+    .radius-#{$i * 5} {
+        border-radius: $i * 5px;
+    }
+    
+    // .p-0-40, .m-20-10
+    @for $j from 0 through 40 {
+        @each $s in $spacings {
+            .#{firstChar($s)}-#{$i}-#{$j} {
+                #{$s}: ($i * 5px) ($j * 5px);
+            }
+        }
+    }
+}
+
+.round {
+    border-radius: 9999px;
+}
+
+
+@each $dir in $directions {
+    .m#{firstChar($dir)}-auto {
+        margin-#{$dir}: auto;
+    }
+}
+
+.absolute-center {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+}

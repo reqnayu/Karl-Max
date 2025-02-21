@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Franka",
+    "release_date": "Jul 15 2023",
+    "tracks": [{ "name": "Franka", "duration": "3:35" }],
+    "spotify_url": "https://open.spotify.com/album/1cT1gaT5fbzTBObX5pdyJU"
+  },
+  {
+    "name": "Sarleinsbach",
+    "release_date": "May 1 2023",
+    "spotify_url": "https://open.spotify.com/album/4rQUY3e6ysUVVpyfcpNVTN",
+    "tracks": [
+      { "name": "Es geht noch mehr", "duration": "2:14" },
+      { "name": "Tschick", "duration": "2:45" },
+      { "name": "Heb ab", "duration": "2:45" },
+      { "name": "Akzeptanz", "duration": "2:35" },
+      { "name": "Dunststoff (Homo Plastic)", "duration": "3:40" },
+      { "name": "Blaustich", "duration": "1:36" }
+    ]
+  },
+  {
+    "name": "Megamax",
+    "release_date": "Oct 15 2022",
+    "spotify_url": "https://open.spotify.com/album/39SzrGRCfVPIKYiXwNQzyX",
+    "tracks": [
+      { "name": "König", "duration": "2:56" },
+      { "name": "Korruption", "duration": "3:04" },
+      { "name": "Liebe, Kriege", "duration": "3:32" }
+    ]
+  },
+  {
+    "name": "Badewaschln",
+    "release_date": "Aug 1 2022",
+    "spotify_url": "https://open.spotify.com/album/7jylGSMyCvC0r57VCPuM4z",
+    "tracks": [
+      { "name": "Badewaschln", "duration": "5:46" },
+      { "name": "Badewaschln - Instumental", "duration": "5:46" }
+    ]
+  },
+  {
+    "name": "Multimax",
+    "release_date": "Jul 1 2022",
+    "spotify_url": "https://open.spotify.com/album/6Ykc8ogdtGkdKXwlsGLb6y",
+    "tracks": [
+      { "name": "Wettbewerb", "duration": "4:16" },
+      { "name": "Gotteskomplex", "duration": "4:15" },
+      { "name": "System", "duration": "3:54" },
+      { "name": "Bittersüß", "duration": "3:38" },
+      { "name": "Badewaschln", "duration": "5:46" },
+      { "name": "Fm & C", "duration": "5:11" },
+      { "name": "Gehma nachher tanzen?", "duration": "5:48" },
+      { "name": "Prekariat", "duration": "3:04" }
+    ]
+  },
+  {
+    "name": "Bittersüß",
+    "spotify_url": "https://open.spotify.com/album/0K7c6fPqsYj0xj5d1qYZlW",
+    "release_date": "Jun 1 2022",
+    "tracks": [{ "name": "Bittersüß", "duration": "3:38" }]
+  },
+  {
+    "name": "Wettbewerb",
+    "spotify_url": "https://open.spotify.com/album/5HTCtPz2pPM0oWtYZAbXke",
+    "release_date": "May 1 2022",
+    "tracks": [{ "name": "Wettbewerb", "duration": "4:16" }]
+  }
+]

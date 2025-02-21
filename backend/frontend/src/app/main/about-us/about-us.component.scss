@@ -1,0 +1,6 @@
+@use 'lib';
+
+:host {
+    @extend .page;
+    @extend .flex-center, .column;
+}

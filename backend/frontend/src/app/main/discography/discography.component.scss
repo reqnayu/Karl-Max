@@ -1,0 +1,56 @@
+@use 'lib';
+@use 'variables' as *;
+
+#wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+}
+
+.item {
+    background-color: $clr-background-2;
+
+    h4 {
+        color: $clr-lightgray;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn-social {
+        height: 30px;
+        width: 30px;
+    }
+
+    .details {
+        flex-grow: 1;
+
+        .icon {
+            height: 16px;
+            width: 16px;
+        }
+
+        .header, .content {
+
+            > div:nth-of-type(1) {
+                width: 35px;
+            }
+
+            > div:nth-of-type(2) {
+                flex-grow: 1;
+            }
+        }
+
+        .header {
+            color: $clr-gray;
+        }
+
+        .content {
+            border-top: 1px solid $clr-gray;
+        }
+
+        .duration, app-icon {
+            justify-self: end;
+        }
+    }
+}

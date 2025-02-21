@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'lib';
+
+:host {
+    display: block;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+nav {
+    color: $clr-white;
+    $height: 100px;
+    width: 100%;
+    padding: $size-1;
+    position: sticky;
+    top: 0;
+    margin-top: calc(50vh - ($height / 2));
+    height: $height;
+    pointer-events: all;
+}
+
+button {
+    font-size: $size-1 * 1.2;
+    transition: $fast ease-in-out;
+    white-space: nowrap;
+
+    &:hover {
+        color: $clr-primary-3;
+    }
+
+    &.active {
+        background-color: $clr-primary-2;
+        color: $clr-white;
+        font-weight: 700;
+    }
+}
+
+#logo {
+    white-space: nowrap;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+app-social-media {
+    position: absolute;
+    inset: auto 0 150%;
+}

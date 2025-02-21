@@ -1,0 +1,11 @@
+<nav class="flex align-center between p-0-40">
+  <div id="logo">KARL MAX</div>
+  <div id="links" class="flex align-center gap-40">
+    @for (dir of directories; track $index) {
+    <button [routerLink]="dir.path" routerLinkActive="active" class="p-1-3 radius-10">
+      {{ dir.displayName }}
+    </button>
+    }
+  </div>
+  <app-social-media></app-social-media>
+</nav>

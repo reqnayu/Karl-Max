@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build:backend": "tsc",
-    "build:frontend": "cd frontent && ng build",
+    "build:frontend": "cd frontend && ng build",
     "build": "npm run build:backend && npm run build:frontend",
     "start": "node dist/index.js",
     "dev": "npx tsx src/index.ts"

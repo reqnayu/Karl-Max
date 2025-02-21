@@ -21,6 +21,7 @@
     "firebase-admin": "^13.1.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^19.1.8",
     "@angular/cli": "^19.1.8",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",

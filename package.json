@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:backend": "tsc",
+    "build:backend": "tsc --listEmittedFiles",
     "build:frontend": "cd frontend && ./node_modules/.bin/ng build",
     "build:deploy": "npm i && cd frontend && npm i && cd .. && npm run build",
     "build": "npm run build:backend && npm run build:frontend",

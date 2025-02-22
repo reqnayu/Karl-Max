@@ -1,4 +1,4 @@
-<div class="page-title">Diskographie</div>
+<div class="page-title">Diskografie</div>
 <div id="wrapper" class="grid gap-50 p-0-20">
   @for (item of discographyItems; track $index) {
   <div class="item flex wrap gap-40 p-10 radius-20">
@@ -6,7 +6,7 @@
       <img src="{{ item.img }}" alt="" class="radius-20" />
     </div>
     <div class="details flex column">
-      <div class="flex row between align-center m-1-0">
+      <div class="flex wrap gap-10 between align-center m-1-0">
         <div>
           <h2>{{ item.name }}</h2>
         </div>

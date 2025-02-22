@@ -11,6 +11,23 @@ export class ScrollService {
   private sections: Map<Route, ElementRef<HTMLElement>> = new Map()
   private router = inject(Router)
 
+  private observer = new IntersectionObserver(
+    (entries) => {
+      const [section] = entries
+        .filter(({ isIntersecting }) => isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+      // console.log(
+      //   entries.map(({ target }) => target),
+      //   section?.target,
+      //   section?.isIntersecting
+      // )
+      // if (!entry.isIntersecting) return
+      // const t = entry.target as HTMLElement
+      // console.log(t, 'section !')
+    },
+    { threshold: [0.6] }
+  )
+
   constructor() {
     this.router.events.subscribe((event) => {
       if (!(event instanceof NavigationEnd)) return
@@ -21,6 +38,7 @@ export class ScrollService {
 
   public registerSection(sections: Section[]) {
     sections.forEach(({ route, el }) => {
+      this.observer.observe(el.nativeElement)
       this.sections.set(route, el)
     })
   }

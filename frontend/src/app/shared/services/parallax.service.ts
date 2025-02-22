@@ -8,6 +8,7 @@ export class ParallaxService {
   private observedElements: { el: HTMLElement; factor: number }[] = []
 
   public navBar?: ElementRef<HTMLElement>
+  public navBarBackground?: ElementRef<HTMLElement>
   private lastScrollY = -1
 
   private parallaxObserver = new IntersectionObserver(
@@ -19,8 +20,6 @@ export class ParallaxService {
     },
     { threshold: [0, 1] }
   )
-
-  private navBarObserver = new IntersectionObserver(([entry]) => {})
 
   constructor() {
     window.onscroll = throttle((e) => this.onScroll(e), 10)
@@ -46,7 +45,9 @@ export class ParallaxService {
       this.lastScrollY = currentScrollY
     }
     const isScrollingDown = currentScrollY > this.lastScrollY
-    this.navBar?.nativeElement.classList.toggle('hidden', isScrollingDown)
+    ;[this.navBar, this.navBarBackground].forEach((el) => {
+      el?.nativeElement.classList.toggle('hidden', isScrollingDown)
+    })
     this.lastScrollY = currentScrollY
   }
 

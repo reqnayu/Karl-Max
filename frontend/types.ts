@@ -11,7 +11,7 @@ export type Icon =
   | 'keytar'
   | 'bass'
 
-export type Route = '/start' | '/die-band' | '/kontakt' | '/archiv'
+export type Route = '/start' | '/die-band' | '/kontakt' | '/diskografie'
 
 export type Directory = {
   displayName: string

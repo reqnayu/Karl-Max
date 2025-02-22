@@ -12,7 +12,6 @@ export class ParallaxDirective {
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {
-    this.el.nativeElement.style.setProperty('--top', this.el.nativeElement.getBoundingClientRect().top.toString())
     this.service.observe(this.el.nativeElement, this.factor)
   }
 }

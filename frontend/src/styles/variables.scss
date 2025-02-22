@@ -12,6 +12,11 @@ $clr-lightgray: #999;
 $size-1: 1.5rem;
 $size-normal: 1.2rem;
 
+@media (width < 600px) {
+    $size-1: 1rem;
+    $size-normal: .8rem;
+}
+
 /* Speeds */
 $speed-fast: 125ms;
 $speed-medium: 250ms;

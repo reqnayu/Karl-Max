@@ -12,8 +12,8 @@ export const routes: Routes = [
     children: [
       { path: 'start', component: HomeComponent },
       { path: 'die-band', component: AboutUsComponent },
-      // { path: 'kontakt', component: ContactComponent },
-      // { path: 'archiv', component: ArchiveComponent },
+      { path: 'diskografie', component: ArchiveComponent },
+      { path: 'kontakt', component: ContactComponent },
     ],
   },
   {

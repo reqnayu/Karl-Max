@@ -8,6 +8,7 @@ import { IconComponent } from '../components/icon/icon.component'
 import { ScrollService } from '../shared/services/scroll.service'
 import { ContactComponent } from './contact/contact.component'
 import { RouterLink } from '@angular/router'
+import { ParallaxService } from '../shared/services/parallax.service'
 
 @Component({
   selector: 'app-main',
@@ -27,19 +28,21 @@ import { RouterLink } from '@angular/router'
 })
 export class MainComponent {
   private scroller = inject(ScrollService)
+  private parallax = inject(ParallaxService)
 
   @ViewChild('landing', { read: ElementRef<HTMLElement> }) landing!: ElementRef<HTMLElement>
   @ViewChild('aboutUs', { read: ElementRef<HTMLElement> }) aboutUs!: ElementRef<HTMLElement>
   @ViewChild('discography', { read: ElementRef<HTMLElement> }) discography!: ElementRef<HTMLElement>
   @ViewChild('contact', { read: ElementRef<HTMLElement> }) contact!: ElementRef<HTMLElement>
+  @ViewChild('navBackground', { read: ElementRef<HTMLElement> }) navBackground!: ElementRef<HTMLElement>
 
   ngAfterViewInit() {
-    console.log(this.landing.nativeElement)
     this.scroller.registerSection([
       { route: '/start', el: this.landing },
       { route: '/die-band', el: this.aboutUs },
-      { route: '/archiv', el: this.discography },
+      { route: '/diskografie', el: this.discography },
       { route: '/kontakt', el: this.contact },
     ])
+    this.parallax.navBarBackground = this.navBackground
   }
 }

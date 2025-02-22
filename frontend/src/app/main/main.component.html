@@ -1,9 +1,12 @@
 <div id="wrapper" class="flex column">
   <app-nav></app-nav>
   <app-landing #landing></app-landing>
-  <app-about-us #aboutUs></app-about-us>
-  <app-discography #discography></app-discography>
-  <app-contact #contact></app-contact>
+  <div #navBackground id="nav-background" class="w-100"></div>
+  <div id="content">
+    <app-about-us #aboutUs></app-about-us>
+    <app-discography #discography></app-discography>
+    <app-contact #contact></app-contact>
+  </div>
   <button id="scroll-up" routerLink="/start">
     <app-icon name="arrow-up-circle"></app-icon>
   </button>

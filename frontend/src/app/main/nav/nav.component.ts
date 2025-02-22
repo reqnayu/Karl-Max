@@ -23,6 +23,6 @@ export class NavComponent {
     { displayName: 'Start', path: '/start' },
     { displayName: 'Die Band', path: '/die-band' },
     { displayName: 'Kontakt', path: '/kontakt' },
-    { displayName: 'Archiv', path: '/archiv' },
+    { displayName: 'Diskografie', path: '/diskografie' },
   ]
 }

@@ -9,13 +9,25 @@
     background-color: $clr-background;
 }
 
+#nav-background {
+    position: sticky;
+    top: 0;
+    background-color: $clr-background;
+    height: 120px;
+    transition: $speed-medium ease-in-out;
+
+    &.hidden {
+        top: -100%;
+    }
+}
+
 #scroll-up {
     position: sticky;
     bottom: 20px;
     height: 40px;
     border-radius: 999px;
     transition: $speed-fast ease-in-out;
-    margin: calc(100vh + 25px) 25px 25px auto;
+    margin: 0 25px 25px auto;
     
     app-icon {
         height: 100%;

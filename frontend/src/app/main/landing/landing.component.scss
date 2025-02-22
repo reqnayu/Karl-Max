@@ -1,20 +1,25 @@
+@use 'variables' as *;
 
 #wrapper {
     overflow: hidden;
+    position: relative;
 }
 
 #content {
     height: 100vh;
     overflow: hidden;
-    position: relative;
-    background: url("../../../../public/img/banner.png") center/cover no-repeat;
+    background: url("../../../../public/img/banner.webp") center/cover no-repeat;
     translate: 0 min(calc(var(--parallax) * 1px), 100vh);
 }
 
-#banner {
-    // @extend .absolute-center;
-    display: none;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
+#scroll-down {
+    writing-mode: sideways-rl;
+    position: absolute;
+    inset: auto 0 0 auto;
+    font-size: $size-normal;
+        
+    app-icon {
+        margin: $size-1;
+        height: 50px;
+}
 }

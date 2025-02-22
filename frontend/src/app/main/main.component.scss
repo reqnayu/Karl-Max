@@ -8,3 +8,25 @@
     height: fit-content;
     background-color: $clr-background;
 }
+
+#scroll-up {
+    position: sticky;
+    bottom: 20px;
+    height: 40px;
+    border-radius: 999px;
+    transition: $speed-fast ease-in-out;
+    margin: calc(100vh + 25px) 25px 25px auto;
+    
+    app-icon {
+        height: 100%;
+        color: $clr-primary-3;
+    }
+    
+    &:hover {
+        background-color: $clr-primary-3;
+
+        app-icon {
+            color: $clr-background
+        }
+    }
+}

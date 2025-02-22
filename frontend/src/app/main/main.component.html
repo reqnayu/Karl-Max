@@ -1,5 +1,11 @@
-<app-nav></app-nav>
-<app-landing></app-landing>
-<app-about-us></app-about-us>
-<app-discography></app-discography>
-<app-footer></app-footer>
+<div id="wrapper" class="flex column">
+  <app-nav></app-nav>
+  <app-landing #landing></app-landing>
+  <app-about-us #aboutUs></app-about-us>
+  <app-discography #discography></app-discography>
+  <app-contact #contact></app-contact>
+  <button id="scroll-up" routerLink="/start">
+    <app-icon name="arrow-up-circle"></app-icon>
+  </button>
+  <app-footer></app-footer>
+</div>

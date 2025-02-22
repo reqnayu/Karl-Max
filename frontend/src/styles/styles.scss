@@ -4,6 +4,8 @@
 
 html {
     font-family: "Poppins";
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 button, a, input, h1, h2, h3, h4 {
@@ -75,9 +77,25 @@ h4 {
     font-size: 18px;
 }
 
+p {
+    line-height: 2;
+}
+
 .btn-primary {
-    background-color: $clr-primary-1;
+    background-color: $clr-primary-2;
     color: $clr-white;
+    transition: $speed-fast;
+    
+    app-icon {
+        height: 24px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            font-weight: 700;
+            background-color: $clr-primary-3;
+        }
+    }
 }
 
 .btn-social {

@@ -1,20 +1,28 @@
 <div class="page-title">Diskographie</div>
 <div id="wrapper" class="grid gap-50 p-0-20">
   @for (item of discographyItems; track $index) {
-  <div class="item flex gap-40 p-10 radius-20">
+  <div class="item flex wrap gap-40 p-10 radius-20">
     <div class="flex column between gap-50">
       <img src="{{ item.img }}" alt="" class="radius-20" />
-      <button [title]="item.spotify_url" [link]="item.spotify_url" class="btn-social">
-        <app-icon name="spotify"></app-icon>
-      </button>
     </div>
     <div class="details flex column">
-      <h2 class="m-1-0">{{ item.name }}</h2>
+      <div class="flex row between align-center m-1-0">
+        <div>
+          <h2>{{ item.name }}</h2>
+        </div>
+        <button
+          class="flex gap-10 round pl-2 p-1 btn-primary"
+          [title]="item.spotify_url"
+          [link]="item.spotify_url"
+        >
+          <div>Spotify</div>
+          <app-icon name="spotify"></app-icon>
+        </button>
+      </div>
       <div class="flex row between align-center mb-2">
         <h4>{{ item.getType() }}</h4>
         <h4>{{ item.getFormattedReleaseData() }}</h4>
       </div>
-      <!-- <div class="flex column gap-20"> -->
       <div class="header flex row align-center p-2-0">
         <div>#</div>
         <div>Titel</div>
@@ -27,7 +35,6 @@
         <div class="duration">{{ track.duration }}</div>
       </div>
       }
-      <!-- </div> -->
     </div>
   </div>
   }

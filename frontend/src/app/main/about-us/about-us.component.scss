@@ -1,5 +1,21 @@
 @use 'lib';
+@use 'variables' as *;
 
 :host {
     @extend .page;
+}
+
+app-icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+}
+
+p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.highlight {
+    color: $clr-primary-3;
 }

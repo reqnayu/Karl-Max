@@ -16,7 +16,7 @@ export class DiscographyItem {
   }: NoMethods<Optional<DiscographyItem, 'img' | 'spotify_url'>>) {
     this.name = name
     this.tracks = tracks
-    this.img = img ?? `img/discography/${this.name}.jpeg`
+    this.img = img ?? `img/discography/${this.name}.webp`
     this.release_date = new Date(release_date)
     this.spotify_url = spotify_url ?? ''
   }

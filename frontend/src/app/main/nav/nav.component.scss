@@ -8,39 +8,74 @@
     inset: 0;
     z-index: 10;
     pointer-events: none;
-
-    &.hidden > nav {
+    
+    &.hidden > #wrapper {
         top: -100%;
     }
 }
 
-nav {
-    color: $clr-white;
+#wrapper {
     $height: 100px;
     width: 100%;
-    padding: $size-1;
     position: sticky;
     top: 0;
     margin-top: calc(50vh - ($height / 2));
-    height: $height;
-    pointer-events: all;
     transition: top $speed-medium ease-in-out;
+    z-index: 10;
+}
 
+// #wrapper::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background-color: $clr-background-2;
+//     z-index: -1;
+// }
+
+nav {
+    color: $clr-white;
+    width: 100%;
+    pointer-events: all;
+    z-index: 30;
 }
 
 button {
     font-size: $size-1 * 1.2;
     transition: $speed-fast ease-in-out;
     white-space: nowrap;
+    position: relative;
 
-    &:hover {
-        color: $clr-primary-3;
+    &::after {
+        content: "";
+        height: 3px;
+        @extend .round;
+        width: 0;
+        transition: width $speed-fast;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $clr-white;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            font-weight: 700;
+    
+            &::after {
+                width: 100%;
+            }
+        }
     }
 
     &.active {
-        background-color: $clr-primary-2;
+        // background-color: $clr-primary-2;
         color: $clr-white;
         font-weight: 700;
+
+        &::after {
+            width: 100%;
+            background-color: $clr-primary-3;
+        }
     }
 }
 

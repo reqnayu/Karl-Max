@@ -1,12 +1,33 @@
 @use 'lib';
 @use 'variables' as *;
 
+:host {
+    display: block;
+    container: disco / inline-size;
+}
+
 #wrapper {
     grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
 }
 
+@container disco (width < 850px) {
+    #wrapper {
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+
+    .item {
+        flex-direction: column;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
 .item {
     background-color: $clr-background-2;
+    min-width: 0px;
 
     h4 {
         color: $clr-lightgray;
@@ -14,7 +35,6 @@
 
     img {
         width: 300px;
-        height: 300px;
     }
 
     .btn-social {

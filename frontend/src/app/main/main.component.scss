@@ -8,18 +8,3 @@
     height: fit-content;
     background-color: $clr-background;
 }
-
-#content {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: url("../../../public/img/banner.png") center/cover no-repeat;
-}
-
-#banner {
-    // @extend .absolute-center;
-    display: none;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-}

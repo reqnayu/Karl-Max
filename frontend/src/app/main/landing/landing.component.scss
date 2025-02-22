@@ -1,0 +1,20 @@
+
+#wrapper {
+    overflow: hidden;
+}
+
+#content {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: url("../../../../public/img/banner.png") center/cover no-repeat;
+    translate: 0 min(calc(var(--parallax) * 1px), 100vh);
+}
+
+#banner {
+    // @extend .absolute-center;
+    display: none;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}

@@ -8,6 +8,10 @@
     inset: 0;
     z-index: 10;
     pointer-events: none;
+
+    &.hidden > nav {
+        top: -100%;
+    }
 }
 
 nav {
@@ -20,11 +24,13 @@ nav {
     margin-top: calc(50vh - ($height / 2));
     height: $height;
     pointer-events: all;
+    transition: top $speed-medium ease-in-out;
+
 }
 
 button {
     font-size: $size-1 * 1.2;
-    transition: $fast ease-in-out;
+    transition: $speed-fast ease-in-out;
     white-space: nowrap;
 
     &:hover {
@@ -45,6 +51,7 @@ button {
 }
 
 app-social-media {
+    translate: 0 min(calc(var(--parallax) * 1px), 90px);
     position: absolute;
-    inset: auto 0 150%;
+    inset: auto 0 200%;
 }

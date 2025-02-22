@@ -23,7 +23,7 @@ $scrollbar-width: 16px;
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 calc($scrollbar-width / 2) rgba(0, 0, 0, .3);
-    background-color: $clr-primary-1;
+    background-color: $clr-primary-3;
     border: calc($scrollbar-width / 4) solid transparent;
     background-clip: content-box;
 }
